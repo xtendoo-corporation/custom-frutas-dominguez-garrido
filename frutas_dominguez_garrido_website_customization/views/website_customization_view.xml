@@ -22,10 +22,21 @@
                 class="alert alert-info"
                 t-if="website.frutas_dominguez_garrido_website_price_default_message and user_authenticated"
             >
-                <i class="fa fa-info-circle" />
+                <i class="fa fa-info-circle"/>
                 <span
                     t-esc="website.frutas_dominguez_garrido_website_price_default_message"
                 />
+            </div>
+        </xpath>
+
+        <xpath expr="//a[@id='add_to_cart']" position="before">
+              <div
+                class="alert alert-light" style="padding-bottom:10px"
+            >
+            <span >Measurement:</span>
+                <b>
+                    <span t-field="product.uom_id"></span>
+                </b>
             </div>
         </xpath>
     </template>
