@@ -1,12 +1,17 @@
 <odoo>
-    <template id="product_price" inherit_id="website_sale.product_price">
+    <template id="frutas_dominguez_garrido_website_sale_product_price" inherit_id="website_sale.product_price">
         <xpath expr="//div[@itemprop='offers']" position="attributes">
-            <attribute name="invisible">1</attribute>
+            <attribute name="t-if">
+                False
+            </attribute>
         </xpath>
     </template>
-        <template id="product_price" inherit_id="website_sale.products_item">
-        <xpath expr="//div[@itemprop='price']" position="attributes">
-            <attribute name="invisible">1</attribute>
+
+    <template id="frutas_dominguez_garrido_website_sale_products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//div[@itemprop='offers']" position="attributes">
+            <attribute name="t-if">
+                False
+            </attribute>
         </xpath>
     </template>
 </odoo>
