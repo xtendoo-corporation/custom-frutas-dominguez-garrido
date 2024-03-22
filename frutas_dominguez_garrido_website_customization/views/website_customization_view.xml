@@ -2,13 +2,11 @@
     <template id="product_price" inherit_id="website_sale.product_price">
         <xpath expr="//div[@itemprop='offers']" position="attributes">
             <attribute name="invisible">1</attribute>
-            <attribute>product.website_hide_price</attribute>
         </xpath>
     </template>
         <template id="product_price" inherit_id="website_sale.products_item">
-        <xpath expr="//div[@itemprop='offers']" position="attributes">
+        <xpath expr="//div[@itemprop='price']" position="attributes">
             <attribute name="invisible">1</attribute>
-            product.website_hide_price
         </xpath>
     </template>
 </odoo>
