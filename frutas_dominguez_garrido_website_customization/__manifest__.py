@@ -3,7 +3,7 @@
     "summary": "Website customization",
     "version": "16.0.1.0.0",
     "category": "Website",
-    "author": "Manuel Calero, Salvador Gonzalez,Abraham Carrasco, Xtendoo",
+    "author": "Manuel Calero, Salvador Gonzalez, Abraham Carrasco, Xtendoo",
     "license": "LGPL-3",
     "application": True,
     "depends": [
@@ -11,6 +11,7 @@
     ],
     "data": [
         "views/website_customization_view.xml",
+        "views/res_config_settings_view.xml",
     ],
     "installable": True,
 }

@@ -14,17 +14,20 @@
             </attribute>
         </xpath>
     </template>
-  <template id="product" inherit_id="website_sale.product">
-    <xpath expr="//a[@id='add_to_cart']" position="before">
-            <t t-set="user_authenticated" t-value="user_id != website.user_id" />
+
+    <template id="product" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_details']/p[1]" position="after">
+            <t t-set="user_authenticated" t-value="user_id != website.user_id"/>
             <div
                 class="alert alert-info"
-                t-if="user_authenticated"
+                t-if="website.frutas_dominguez_garrido_website_price_default_message and user_authenticated"
             >
-                <i class="fa fa-info-circle" /> <span
-                    string="El precio del producto varía según el mercado"
-                />El precio del producto varía según el mercado
+                <i class="fa fa-info-circle" />
+                <span
+                    t-esc="website.frutas_dominguez_garrido_website_price_default_message"
+                />
             </div>
         </xpath>
-  </template>
+    </template>
+
 </odoo>
