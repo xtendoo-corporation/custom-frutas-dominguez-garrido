@@ -14,4 +14,17 @@
             </attribute>
         </xpath>
     </template>
+  <template id="product" inherit_id="website_sale.product">
+    <xpath expr="//a[@id='add_to_cart']" position="before">
+            <t t-set="user_authenticated" t-value="user_id != website.user_id" />
+            <div
+                class="alert alert-info"
+                t-if="user_authenticated"
+            >
+                <i class="fa fa-info-circle" /> <span
+                    string="El precio del producto varía según el mercado"
+                />El precio del producto varía según el mercado
+            </div>
+        </xpath>
+  </template>
 </odoo>
