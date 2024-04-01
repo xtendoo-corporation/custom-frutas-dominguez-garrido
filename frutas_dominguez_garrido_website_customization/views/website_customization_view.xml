@@ -30,13 +30,39 @@
         </xpath>
 
         <xpath expr="//a[@id='add_to_cart']" position="before">
-              <div
-                class="alert alert-light" style="padding-bottom:10px"
+            <div
+                class="alert alert-light" style="padding:5px; margin-top:15px;
+                    margin-right:8px; color:black"
             >
-            <span >Measurement:</span>
                 <b>
                     <span t-field="product.uom_id"></span>
                 </b>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="frutas_dominguez_garrido_website_sale_cart" inherit_id="website_sale.cart">
+        <xpath expr="//a[@class='btn btn-primary float-end']/t[2]/span[1]" position="replace">
+            <span>Enviar ahora</span>
+        </xpath>
+    </template>
+
+    <template id="product_share_buttons" inherit_id="website_sale.product" active="True" name="Share Buttons"
+              priority="22">
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="after">
+            <div class="h4 mt-3 mb-0 d-flex justify-content-md-end flex-shrink-0" contenteditable="false">
+                <a t-if="not _exclude_share_links or not 'instagram' in _exclude_share_links"
+                   href="https://www.instagram.com/frutasdominguezgarrido/" t-attf-class="s_share_instagram #{_link_classes}" target="_blank"
+                style="margin-right:5px">
+                    <i t-attf-class="fa fa-instagram"/>
+                </a>
+                <t t-snippet-call="website.s_share">
+                    <t t-set="_exclude_share_links"
+                       t-value="['whatsapp', 'linkedin', 'twitter', 'pinterest', 'email']"/>
+                    <t t-set="_no_title" t-value="True"/>
+                    <t t-set="_classes" t-valuef="text-lg-end"/>
+                    <t t-set="_link_classes" t-valuef="mx-1 my-0"/>
+                </t>
             </div>
         </xpath>
     </template>
