@@ -41,9 +41,53 @@
         </xpath>
     </template>
 
+    <!--Cambia el contenido del boton de "Pagar ahora" a "Enviar ahora"-->
     <template id="frutas_dominguez_garrido_website_sale_cart" inherit_id="website_sale.cart">
-        <xpath expr="//a[@class='btn btn-primary float-end']/t[2]/span[1]" position="replace">
+        <xpath expr="//div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/a[1]/t[2]/span[1]" position="replace">
             <span>Enviar ahora</span>
+        </xpath>
+    </template>
+
+    <!--OCulta los precios del los carritos-->
+    <template id="cart_delivery" name="Delivery Costs" inherit_id="website_sale.total">
+        <xpath expr="//tr[@id='order_total_untaxed']" position="replace">
+        </xpath>
+        <xpath expr="//tr[@id='order_total_taxes']" position="replace">
+        </xpath>
+        <xpath expr="//tr[@id='order_total']" position="replace">
+        </xpath>
+    </template>
+
+    <!--Oculta la vista que contiene el carrito-->
+    <template id="short_cart_summary" inherit_id="website_sale.short_cart_summary">
+        <xpath expr="//div[1]" position="replace">
+        </xpath>
+    </template>
+
+    <!--Oculta la cabecera de columna de precios del carrito-->
+    <template id="cart_lines" inherit_id="website_sale.cart_lines" name="Shopping Cart Lines">
+        <xpath expr="//table[1]/thead[1]/tr[1]/th[4]" position="replace">
+        </xpath>
+    </template>
+
+    <!--Oculta la columna de precios del carrito-->
+    <template id="optional_product_items" inherit_id="website_sale.cart_lines" name="Shopping Cart Lines">
+        <xpath expr="//t[1]/table[1]/tbody[1]/t[1]/tr[1]/td[3]/t[3]/span[1]" position="replace">
+        </xpath>
+    </template>
+
+    <!--Oculta la columna de precios de la compra-->
+    <template id="website_product_cod_payment" inherit_id='website_sale.cart_summary'>
+        <xpath expr="//div[1]/div[1]/div[3]/table[1]/tbody[1]/tr[1]/td[3]" position="replace">
+        </xpath>
+        <!--Oculta la linea de envios y de codigo promocional-->
+        <xpath expr="//div[1]/div[1]/div[3]/t[2]" position="replace">
+        </xpath>
+    </template>
+
+    <!--Oculta la cabecera de columna de precios de la compra-->
+    <template id="cart_summary" inherit_id='website_sale.cart_summary'>
+        <xpath expr="//div[1]/div[1]/div[3]/table[1]/thead[1]/tr[1]/th[4]" position="replace">
         </xpath>
     </template>
 
@@ -52,8 +96,9 @@
         <xpath expr="//div[@id='o_product_terms_and_share']" position="after">
             <div class="h4 mt-3 mb-0 d-flex justify-content-md-end flex-shrink-0" contenteditable="false">
                 <a t-if="not _exclude_share_links or not 'instagram' in _exclude_share_links"
-                   href="https://www.instagram.com/frutasdominguezgarrido/" t-attf-class="s_share_instagram #{_link_classes}" target="_blank"
-                style="margin-right:5px">
+                   href="https://www.instagram.com/frutasdominguezgarrido/"
+                   t-attf-class="s_share_instagram #{_link_classes}" target="_blank"
+                   style="margin-right:5px">
                     <i t-attf-class="fa fa-instagram"/>
                 </a>
                 <t t-snippet-call="website.s_share">
