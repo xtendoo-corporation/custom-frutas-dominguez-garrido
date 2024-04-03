@@ -133,4 +133,12 @@
         </xpath>
     </template>
 
+    <template id="sale_order_portal_template" name="Sales Order Portal Template" inherit_id="portal.portal_sidebar"
+              primary="True"
+    >
+        <xpath expr="//div[hasclass('o_portal_sidebar')]" position="replace">
+        </xpath>
+    </template>
+
+
 </odoo>
