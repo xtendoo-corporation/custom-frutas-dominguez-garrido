@@ -112,4 +112,25 @@
         </xpath>
     </template>
 
+    <template id="portal_contract_page" name="Sales Order Portal Content"
+              inherit_id="sale.sale_order_portal_content">
+        <!--Oculta el contenido de las cabeceras-->
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/thead[1]/tr[1]/th[6]" position="replace">
+        </xpath>
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]" position="replace">
+        </xpath>
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/thead[1]/tr[1]/th[3]" position="replace">
+        </xpath>
+        <!--Oculta el contenido de las columnas-->
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/tbody[1]/t[3]/tr[1]/t[1]/td[6]" position="replace">
+        </xpath>
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/tbody[1]/t[3]/tr[1]/t[1]/td[5]" position="replace">
+        </xpath>
+        <xpath expr="//div[2]/section[1]/div[1]/table[1]/tbody[1]/t[3]/tr[1]/t[1]/td[3]" position="replace">
+        </xpath>
+        <!--Oculta la suma de B.I., impuestos y total-->
+        <xpath expr="//div[2]/section[1]/div[2]" position="replace">
+        </xpath>
+    </template>
+
 </odoo>
