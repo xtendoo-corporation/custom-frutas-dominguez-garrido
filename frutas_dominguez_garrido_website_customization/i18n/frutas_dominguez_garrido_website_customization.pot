@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* frutas_dominguez_garrido_website_customization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-09 11:49+0000\n"
+"PO-Revision-Date: 2024-04-09 11:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model_terms:ir.ui.view,arch_db:frutas_dominguez_garrido_website_customization.frutas_dominguez_garrido_website_sale_cart
+msgid "<span>Send now</span>"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model,name:frutas_dominguez_garrido_website_customization.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model.fields,field_description:frutas_dominguez_garrido_website_customization.field_res_config_settings__frutas_dominguez_garrido_website_price_default_message
+#: model:ir.model.fields,field_description:frutas_dominguez_garrido_website_customization.field_website__frutas_dominguez_garrido_website_price_default_message
+msgid "Default Hidden price message"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model,name:frutas_dominguez_garrido_website_customization.model_product_template_attribute_value
+msgid "Product Template Attribute Value"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model.fields,field_description:frutas_dominguez_garrido_website_customization.field_product_template_attribute_value__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model_terms:ir.ui.view,arch_db:frutas_dominguez_garrido_website_customization.res_config_settings_view_form
+msgid "Set a default text when hiding prices"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model,name:frutas_dominguez_garrido_website_customization.model_website
+msgid "Website"
+msgstr ""
+
+#. module: frutas_dominguez_garrido_website_customization
+#: model:ir.model.fields,help:frutas_dominguez_garrido_website_customization.field_res_config_settings__frutas_dominguez_garrido_website_price_default_message
+#: model:ir.model.fields,help:frutas_dominguez_garrido_website_customization.field_website__frutas_dominguez_garrido_website_price_default_message
+msgid ""
+"When the price is hidden on the website we can give the customersome tips on"
+" how to find it out."
+msgstr ""

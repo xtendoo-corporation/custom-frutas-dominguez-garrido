@@ -44,7 +44,7 @@
     <!--Cambia el contenido del boton de "Pagar ahora" a "Enviar ahora"-->
     <template id="frutas_dominguez_garrido_website_sale_cart" inherit_id="website_sale.cart">
         <xpath expr="//div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/a[1]/t[2]/span[1]" position="replace">
-            <span>Enviar ahora</span>
+            <span>Send now</span>
         </xpath>
     </template>
 
